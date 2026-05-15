@@ -24,7 +24,9 @@ Prvotní základ celého projektu vychází z example LoRa aplikace LoRaWAN_End_
 
 Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru STM32WL a LoRaWAN middleware stack. Aplikace obsahuje debug UART rozhraní a má implementovánu obsluhu pro různé příchozí eventy, jako je obecný ALARM, TXDONE - odeslání dat, DOWNDATA - příjem dat a další. Dále je zajištěna podpora pro periodické posílání aplikačních dat na network server.  
 
-<p align="center">![Blokové schéma zapojení komunikace](Blok_schema.png)</p>
+<p align="center">
+  <img src="Blok_schema.png" alt="Blokové schéma zapojení komunikace" width="600">
+</p>
 
 ### Přidané funkce 
 K výše popsané základní aplikaci jsou dále uživatelsky implementovány vlastní funkce za účelem:
