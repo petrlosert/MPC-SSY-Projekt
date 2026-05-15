@@ -9,11 +9,13 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 - analogový senzor pro měření výšky hladiny  
 
 ###  Propojení pinů - Pinout
+<br align="center">
 | Pin | Senzor | Funkce
 |---|---|---|
 | PB14 | AOUT | ADC_IN1 – analogový vstup ze senzoru |
 | 3V3 | <p align="center"> 3V3 </p> | <p align="center"> napájení senzoru </p> | 
 | GND | <p align="center"> GND </p>| <p align="center"> společná zem </p> |
+</br>
 <br>
 
 
