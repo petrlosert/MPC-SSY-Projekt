@@ -11,10 +11,16 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 ###  Propojení pinů - Pinout
 | Pin | Funkce |
 |---|---|
-| PB14 | ADC_IN1 – analogový vstup senzoru |
+| PB14 | ADC_IN1 – analogový vstup ze senzoru |
 | LED1 | <p align="center"> Stavová LED </p>|
 | LED2 | Stavová LED |
 | LED3 | Stavová LED |
-| BUT1 | Uživatelské tlačítko |
-| PROB1 | Debug GPIO |
-| PROB2 | Debug GPIO |
+
+
+## Popis software 
+### LoRa example
+Prvotní základ celého projektu vychází z example LoRa aplikace LoRaWAN_End_Node_LBM, který implementuje LoRaWAN end-node zařízení, které se po spuštění připojí do LoRaWAN sítě pomocí OTAA aktivace a následně periodicky odesílá aplikační data na network server. 
+
+Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru STM32WL a LoRaWAN middleware stack. Aplikace obsahuje debug UART rozhraní a má implementovánu obsluhu pro různé příchozí eventy, jako je obecný ALARM, TXDONE - odeslání dat, DOWNDATA - příjem dat a další. Dále je zajištěna podpora pro periodické posílání aplikačních dat na network server.      
+
+
