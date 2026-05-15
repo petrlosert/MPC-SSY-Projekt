@@ -1,1 +1,1 @@
-# MPC-SSY-Projekt
+# Semestrální projekt z předmětu MPC-SSY
