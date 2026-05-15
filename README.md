@@ -16,7 +16,8 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 | LED2 | Stavová LED |
 | LED3 | Stavová LED |
 
-
+<br>
+<br>
 ## Popis software 
 ### LoRa example
 Prvotní základ celého projektu vychází z example LoRa aplikace LoRaWAN_End_Node_LBM, který implementuje LoRaWAN end-node zařízení, které se po spuštění připojí do LoRaWAN sítě pomocí OTAA aktivace a následně periodicky odesílá aplikační data na network server. 
