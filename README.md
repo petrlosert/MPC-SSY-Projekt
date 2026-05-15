@@ -30,4 +30,5 @@ K výše popsané základní aplikaci jsou dále uživatelsky implementovány vl
 - serializaci dat za pomoci union struktury
 - parsování zařízením přijatých dat
 - rozšíření UART debuggingu payloadů
-  
+
+Níže bude každý z těchto bodů rozveden spolu s podrobnějším popisem a důvody této změny.
