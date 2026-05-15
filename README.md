@@ -22,7 +22,9 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 ### LoRa example
 Prvotní základ celého projektu vychází z example LoRa aplikace LoRaWAN_End_Node_LBM, který implementuje LoRaWAN end-node zařízení, které se po spuštění připojí do LoRaWAN sítě pomocí OTAA aktivace a následně periodicky odesílá aplikační data na network server. 
 
-Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru STM32WL a LoRaWAN middleware stack. Aplikace obsahuje debug UART rozhraní a má implementovánu obsluhu pro různé příchozí eventy, jako je obecný ALARM, TXDONE - odeslání dat, DOWNDATA - příjem dat a další. Dále je zajištěna podpora pro periodické posílání aplikačních dat na network server.      
+Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru STM32WL a LoRaWAN middleware stack. Aplikace obsahuje debug UART rozhraní a má implementovánu obsluhu pro různé příchozí eventy, jako je obecný ALARM, TXDONE - odeslání dat, DOWNDATA - příjem dat a další. Dále je zajištěna podpora pro periodické posílání aplikačních dat na network server.  
+
+![Blokové schéma zapojení komunikace](Blok_schema.png)
 
 ### Přidané funkce 
 K výše popsané základní aplikaci jsou dále uživatelsky implementovány vlastní funkce za účelem:
