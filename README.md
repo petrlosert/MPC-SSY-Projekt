@@ -27,10 +27,15 @@ Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru
 
 ### Přidané funkce 
 K výše popsané základní aplikaci jsou dále uživatelsky implementovány vlastní funkce za účelem:
-- práci s ADC periferií
+- práci s periferií ADC
 - návrh vlastního aplikačního payloadu
 - serializaci dat za pomoci union struktury
 - parsování zařízením přijatých dat
 - rozšíření UART debuggingu payloadů
 
 Níže bude každý z těchto bodů rozveden spolu s podrobnějším popisem a důvody této změny.
+
+### Práce s periferií ADC
+Rozšíření v podobě práce s A/D převodníkem bylo provedeno za pomoci Cube MX, byl vytvořen základ pro čtení analogových hodnot z externího senzoru hladiny přes pin PB14 / ADC_IN1. Jedná se o 12bitový A/D převodník (s hodnotami 0 - 4095). Hodnota převodníku je přečtena za pomoci funkce *ReadWater()*, avšak chybí převedení na hodnotu vzdálenosti - tedy kalibrace. Hodnota z převodníku je odesílána jako pole "humidity" namísto původní hodnoty vlhkosti vyplňované v examplu.    
+
+### Návrh vlastního aplikačního payloadu
