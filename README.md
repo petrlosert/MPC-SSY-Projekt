@@ -18,7 +18,6 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 <br>
 
 
-
 ## Popis software 
 ### LoRa example
 Prvotní základ celého projektu vychází z example LoRa aplikace LoRaWAN_End_Node_LBM, který implementuje LoRaWAN end-node zařízení, které se po spuštění připojí do LoRaWAN sítě pomocí OTAA aktivace a následně periodicky odesílá aplikační data na network server. 
@@ -52,4 +51,4 @@ Funkci ovšem nebylo možné řádně otestovat vzhledem k problémům s příjm
 Pro přehlednost při debuggingu pomocí rozhraní UART byla přidána vrstva výpisů ohledně hodnot právě odesílaných dat nebo číselné identifikační hodnoty právě proběhnutého eventu.
 
 ## Nedotatky a podněty ke zlepšení 
-
+Nedostatky byly popsány v kapitolách výše a v zásadě se jedná o kalibraci připojeného senzoru na konkrétní hodnoty, a především problém s přijímáním dat ze strany network serveru.  
