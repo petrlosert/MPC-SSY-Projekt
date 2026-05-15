@@ -13,7 +13,7 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 |---|---|---|
 | PB14 | AOUT | ADC_IN1 – analogový vstup ze senzoru |
 | 3V3 | 3V3 | napájení senzoru | 
-| GND | GND | společná zem |
+| GND | GND | <p align="center"> společná zem </p> |
 <br>
 
 
