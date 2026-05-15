@@ -29,13 +29,14 @@ Pro realizaci komunikace slouží Sub-GHz rádio integrované v mikrokontroléru
 K výše popsané základní aplikaci jsou dále uživatelsky implementovány vlastní funkce za účelem:
 - práci s periferií ADC
 - návrh vlastního aplikačního payloadu
-- serializaci dat za pomoci union struktury
+- serializaci dat za pomoci *union* struktury
 - parsování zařízením přijatých dat
 - rozšíření UART debuggingu payloadů
 
 Níže bude každý z těchto bodů rozveden spolu s podrobnějším popisem a důvody této změny.
 
 ### Práce s periferií ADC
-Rozšíření v podobě práce s A/D převodníkem bylo provedeno za pomoci Cube MX, byl vytvořen základ pro čtení analogových hodnot z externího senzoru hladiny přes pin PB14 / ADC_IN1. Jedná se o 12bitový A/D převodník (s hodnotami 0 - 4095). Hodnota převodníku je přečtena za pomoci funkce *ReadWater()*, avšak chybí převedení na hodnotu vzdálenosti - tedy kalibrace. Hodnota z převodníku je odesílána jako pole "humidity" namísto původní hodnoty vlhkosti vyplňované v examplu.    
+Rozšíření v podobě práce s A/D převodníkem bylo provedeno za pomoci Cube MX, byl vytvořen základ pro čtení analogových hodnot z externího senzoru hladiny přes pin PB14 / ADC_IN1. Jedná se o 12bitový A/D převodník (s hodnotami 0 - 4095). Hodnota převodníku je přečtena za pomoci funkce *ReadWater()*, avšak chybí převedení na hodnotu vzdálenosti - tedy kalibrace. Hodnota z převodníku je odesílána jako pole "humidity" namísto původní hodnoty vlhkosti vyplňované v example.    
 
-### Návrh vlastního aplikačního payloadu
+### Návrh vlastního aplikačního payloadu za pomoc struktury *union*
+Pro vytvoření vlastního LoRa payloadu byl použit datový typ *union*, za pomoci něhož byla vytvořena datová struktura *lora_payload_t*. K jednotlivým hodnotám je přistupováno přes atribut *data* (např. *payload.data.temperature*). Struktura je označena atributem *__packed__* pro správné zarovnání a vícebajtové parametry jsou převedeny pomocí funkce  *__builtin_bswap16()* za účelem zajištění jednotného pořadí bajtů v odesílaných datech. Druhou částí payloadu je poté regionálně závislá část (868/915) - např. zeměpisná poloha.   
