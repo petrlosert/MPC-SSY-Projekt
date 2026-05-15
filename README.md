@@ -14,7 +14,8 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 | PB14 | ADC_IN1 – analogový vstup ze senzoru |
 | LED1 | <p align="center"> Stavová LED </p>|
 | LED2 | Stavová LED |
-| LED3 | Stavová LED |<br><br>
+| LED3 | Stavová LED |
+<br>
 
 
 
