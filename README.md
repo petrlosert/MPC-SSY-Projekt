@@ -8,4 +8,13 @@ Tento projekt implementuje jednoduchou end-node LoRa aplikaci. Dané zařízení
 - nucleo board typu STM32-WL55JC1
 - analogový senzor pro měření výšky hladiny  
 
-## 
+###  Propojení pinů - Pinout
+| Pin | Funkce |
+|---|---|
+| PB14 | ADC_IN1 – analogový vstup senzoru |
+| LED1 | Stavová LED |
+| LED2 | Stavová LED |
+| LED3 | Stavová LED |
+| BUT1 | Uživatelské tlačítko |
+| PROB1 | Debug GPIO |
+| PROB2 | Debug GPIO |
